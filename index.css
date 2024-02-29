@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+:root {
+  /* -------------------same-------------- */
+  --border-same-color: #b12b24;
+  /* ----------------navbar--------------- */
+  --navbar-background-color: #1b262c;
+  --white-text-color: white;
+  --hamburger-background-color: black;
+  /* ----------------about--------------- */
+  --about-background-color: rgb(226, 225, 225);
+  /* ----------------services--------------- */
+  --services-background-color: rgb(226, 225, 225);
+  /* ----------------truck--------------- */
+  --truck-background-color: white;
+  /* ----------------customer-satisfaction--------------- */
+  --customer-background-color: white;
+  --customer-cards-background-color: rgb(226, 225, 225);
+  --quotation-mark-color: rgb(133, 133, 133);
+}
+/* --------------------navbar----------------------- */
+header {
+  width: 100%;
+  background-color: var(--navbar-background-color);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 10vh;
+}
+.hamburger-menu img {
+  width: 25px;
+  height: 25px;
+}
+.company-name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.company-name a {
+  font-size: 20px;
+  color: var(--white-text-color);
+  text-decoration: none;
+}
+.menu-links {
+  display: none;
+}
+.nav-links-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--hamburger-background-color);
+  z-index: 1001;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  overflow: hidden;
+  height: 0;
+  transition: all 0.5s ease-out;
+  animation: slideUp 0.5s ease-out forwards;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+.nav-links-container.active {
+  display: flex;
+  align-items: start;
+  opacity: 1;
+  min-height: 100vh;
+  gap: 150px;
+  padding: 10px;
+  animation: slideDown 0.5s ease-out forwards;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.nav-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--white-text-color);
+  font-size: 20px;
+  font-weight: bold;
+}
+/* --------------------main----------------------- */
+/* --------------home----------------- */
+@keyframes textSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slide-down {
+  animation: textSlideDown 0.5s ease-out forwards;
+}
+main .home-container {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.6) 20%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(./Images/truckParking.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.home-container div h2 {
+  font-size: 20px;
+}
+.underline {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.underline p {
+  width: 100px;
+  border-bottom: 5px solid var(--border-same-color);
+}
+.home-container div p:last-child {
+  font-weight: 400;
+  font-size: 14px;
+}
+/* --------------about----------------- */
+.about-container {
+  padding: 50px 30px;
+  background-color: var(--about-background-color);
+}
+.about-container div:first-child img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.about-container div:last-child {
+  text-align: center;
+  padding-top: 30px;
+}
+.about-container div:last-child h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.about-container div:last-child p:last-child {
+  font-weight: 400;
+  font-size: 14px;
+}
+/* --------------truck----------------- */
+.truck-container {
+  background-image: url(./Images/truckParking2.png);
+  background-position: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.truck-element {
+  width: 90%;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -60px;
+  background-color: var(--truck-background-color);
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.truck-element h2 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+.truck-element p:last-child {
+  font-weight: 400;
+  font-size: 14px;
+}
+/* --------------services----------------- */
+.services-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: var(--services-background-color);
+}
+.services-element h2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.underline-for-three-parts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+.underline-for-three-parts p {
+  width: 50px;
+  border-bottom: 3px solid var(--border-same-color);
+}
+.services-element ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.services-element ul li {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.services-element ul li img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.services-element ul li h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 20px 0 10px 0;
+}
+.services-element ul li p {
+  font-size: 14px;
+  font-weight: 400;
+}
+@media screen and (min-width: 500px) {
+  .services-element ul li,
+  .customer-element ul li {
+    width: 470px;
+  }
+}
+/* --------------customer-satisfaction----------------- */
+.customer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  background-color: var(--customer-background-color);
+}
+.customer-element {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.customer-element h2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.customer-element ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.customer-element ul li {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 50px;
+  border: 1px solid var(--quotation-mark-color);
+  border-radius: 10px;
+  border-top: 2px solid var(--border-same-color);
+  background-color: var(--customer-cards-background-color);
+  padding: 70px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.customer-element ul li:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.customer-comment p {
+  font-size: 14px;
+  font-weight: 400;
+  height: 100px;
+}
+.customer-comment p span {
+  font-size: 20px;
+  margin: 0 10px;
+  color: var(--quotation-mark-color);
+}
+.customer-comment p span:first-child {
+  margin-left: 0;
+}
+.customer-img {
+  margin-bottom: 30px;
+}
+.customer-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.customer-info p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.customer-info .star-element {
+  font-size: 20px;
+}
+@media screen and (min-width: 500px) {
+  .customer-element ul li {
+    width: 470px;
+  }
+}

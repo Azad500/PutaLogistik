@@ -1,0 +1,114 @@
+/* --------------------navbar----------------------- */
+@media screen and (min-width: 992px) {
+  nav {
+    padding: 0 20px;
+  }
+  .company-name a {
+    font-size: 40px;
+  }
+  .menu-links {
+    gap: 40px;
+  }
+  /* --------------------main----------------------- */
+  /* --------------home----------------- */
+  main .home-container {
+    height: 90vh;
+    padding-left: 100px;
+    text-align: start;
+  }
+  .home-container div {
+    width: 450px;
+  }
+  .home-container div h2 {
+    font-size: 40px;
+  }
+  .underline {
+    justify-content: start;
+  }
+  .home-container div p:last-child {
+    font-weight: 600;
+  }
+  /* --------------about----------------- */
+  .about-container {
+    padding: 100px 50px;
+  }
+  .about-container div:first-child img {
+    width: 500px;
+  }
+  .about-container div:last-child {
+    text-align: start;
+    padding-top: 0;
+    padding-left: 50px;
+  }
+  .about-container div:last-child h2 {
+    width: 350px;
+    font-size: 40px;
+  }
+  .about-container div:last-child p:last-child {
+    font-size: 16px;
+    max-width: 500px;
+  }
+  /* --------------truck----------------- */
+  .truck-container {
+    height: 700px;
+  }
+  .truck-element {
+    width: 550px;
+    height: 300px;
+    left: 50px;
+  }
+  .truck-element h2 {
+    font-size: 40px;
+  }
+  .truck-element p:last-child {
+    font-size: 16px;
+  }
+  /* --------------services----------------- */
+  .services-element h2 {
+    font-size: 40px;
+  }
+  .services-element ul {
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+  .services-element ul li {
+    width: 300px;
+  }
+  .services-element ul li h3 {
+    font-size: 25px;
+  }
+  .services-element ul li p {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    .services-element ul li {
+      width: 380px;
+    }
+  }
+  /* --------------customer-satisfaction----------------- */
+  .customer-element ul {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .customer-comment p {
+    font-size: 16px;
+  }
+  .customer-element {
+    max-width: 1200px;
+  }
+  .customer-element ul li {
+    width: 300px;
+  }
+  .customer-info p {
+    font-size: 16px;
+  }
+  .customer-info .star-element {
+    font-size: 25px;
+  }
+  @media screen and (min-width: 1200px) {
+    .customer-element ul li {
+      width: 380px;
+    }
+  }
+}

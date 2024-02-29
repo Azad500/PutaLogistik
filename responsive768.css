@@ -1,0 +1,120 @@
+:root {
+  /* -------------------same-------------- */
+  /* ----------------navbar--------------- */
+  --white-text-color: white;
+}
+/* --------------------navbar----------------------- */
+@media screen and (min-width: 768px) {
+  nav {
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .company-name {
+    width: unset;
+    display: block;
+  }
+  .company-name a {
+    font-size: 30px;
+  }
+  .menu-links {
+    display: flex;
+    gap: 30px;
+  }
+  .menu-links a {
+    color: var(--white-text-color);
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .menu-links .hidden-link {
+    display: block;
+  }
+  /* --------------------main----------------------- */
+  /* --------------home----------------- */
+  main .home-container {
+    height: 70vh;
+    justify-content: start;
+    padding-left: 15px;
+    text-align: start;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.7) 20%,
+        rgba(0, 0, 0, 0) 60%
+      ),
+      url(./Images/truckParking.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .home-container div {
+    width: 250px;
+  }
+  .home-container div h2 {
+    font-size: 25px;
+  }
+  .underline {
+    justify-content: start;
+  }
+  /* --------------about----------------- */
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  .about-container div:last-child {
+    text-align: start;
+    padding-top: 0;
+    padding-left: 50px;
+  }
+  .about-container div:last-child h2 {
+    width: 220px;
+    font-size: 25px;
+  }
+  /* --------------truck----------------- */
+  .truck-container {
+    height: 500px;
+    justify-content: start;
+  }
+  .truck-element {
+    width: 500px;
+    height: 250px;
+    left: 50px;
+    padding: 30px;
+    align-items: start;
+    justify-content: center;
+  }
+  .truck-element h2 {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: start;
+  }
+  /* --------------services----------------- */
+  .services-element h2 {
+    font-size: 25px;
+  }
+  .services-element ul li {
+    width: 47%;
+  }
+  .services-element ul li img {
+    height: 240px;
+  }
+  .services-element ul li h3 {
+    font-size: 20px;
+  }
+  /* --------------customer-satisfaction----------------- */
+  .customer-element h2 {
+    font-size: 25px;
+  }
+  .customer-element ul li {
+    width: 47%;
+  }
+  .customer-element ul li {
+    height: 570px;
+  }
+  .customer-img img {
+    height: 200px;
+  }
+}
