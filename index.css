@@ -30,6 +30,9 @@
 html {
   scroll-behavior: smooth;
 }
+html::-webkit-scrollbar {
+  display: none;
+}
 /* --------------------navbar----------------------- */
 header {
   width: 100%;
