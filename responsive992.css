@@ -9,6 +9,9 @@
   .menu-links {
     gap: 40px;
   }
+  .menu-links a {
+    font-size: 19px;
+  }
   /* --------------------main----------------------- */
   /* --------------home----------------- */
   main .home-container {
@@ -109,6 +112,33 @@
   @media screen and (min-width: 1200px) {
     .customer-element ul li {
       width: 380px;
+    }
+  }
+  /* -------------------contact-------------------- */
+  .contact-element {
+    flex-direction: unset;
+    justify-content: center;
+    align-items: start;
+  }
+  .contact-container h2 {
+    font-size: 40px;
+  }
+  .contact-element li div:last-child {
+    font-size: 18px;
+  }
+  .contact-element form input::placeholder {
+    font-size: 18px;
+  }
+  .contact-element form textarea::placeholder {
+    font-size: 18px;
+  }
+  .contact-element form input:last-child {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    .contact-element form input,
+    textarea {
+      width: 600px;
     }
   }
 }
