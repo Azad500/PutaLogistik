@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 :root {
   /* -------------------same-------------- */
@@ -24,8 +25,6 @@
   --quotation-mark-color: rgb(133, 133, 133);
   /* ----------------contact--------------- */
   --contact-background-color: rgb(226, 225, 225);
-  /* ----------------map--------------- */
-  --map-background-color: white;
 }
 html {
   scroll-behavior: smooth;
@@ -388,7 +387,7 @@ main .home-container {
   font-weight: 600;
   text-align: center;
 }
-.contact-element li div:last-child {
+.contact-info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -398,17 +397,30 @@ main .home-container {
   font-size: 14px;
 }
 .phone-element,
-.mail-element {
+.mail-element,
+.location-element,
+.time-element {
   display: flex;
+  cursor: pointer;
+}
+.time-element {
+  cursor: unset;
 }
 .phone-element img,
-.mail-element img {
-  width: 15px;
-  margin-right: 10px;
+.mail-element img,
+.location-element img,
+.time-element img {
+  width: 20px;
+  margin-right: 5px;
 }
-.phone-element p,
-.mail-element p {
+.location-element a {
+  color: var(--black-text-color);
+  text-decoration: none;
+}
+.phone-element a,
+.mail-element a {
   color: var(--border-same-color);
+  text-decoration: none;
 }
 .contact-element form {
   width: 100%;
@@ -439,13 +451,6 @@ textarea {
   color: var(--white-text-color);
   cursor: pointer;
   font-size: 16px;
-}
-/* -----------------------map-------------------------- */
-.map-container {
-  height: 650px;
-  display: flex;
-  align-items: end;
-  background-color: var(--map-background-color);
 }
 /* ---------------------------footer-------------------- */
 footer {
