@@ -27,17 +27,20 @@
     color: var(--white-text-color);
     text-decoration: none;
     font-size: 14px;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-links a:hover {
+    transform: scale(1.05);
   }
   .menu-links .hidden-link {
     display: block;
   }
   /* --------------------main----------------------- */
   /* --------------home----------------- */
-  main .home-container {
+  .home-container {
     height: 70vh;
-    justify-content: start;
     padding-left: 15px;
-    text-align: start;
+    align-items: start;
     background: linear-gradient(
         to right,
         rgba(255, 255, 255, 0.7) 20%,
@@ -48,10 +51,11 @@
     background-position: center;
     background-size: cover;
   }
-  .home-container div {
+  .home-container div:first-child {
     width: 250px;
+    text-align: start;
   }
-  .home-container div h2 {
+  .home-container div:first-child h2 {
     font-size: 25px;
   }
   .underline {
@@ -72,6 +76,14 @@
   .about-container div:last-child h2 {
     width: 220px;
     font-size: 25px;
+  }
+  .about-us-button {
+    position: relative;
+  }
+  .about-us-button a {
+    position: absolute;
+    left: 0;
+    top: 10px;
   }
   /* --------------truck----------------- */
   .truck-container {

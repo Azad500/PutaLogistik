@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* ----------------navbar--------------- */
+  --navbar-background-color: #2a77d6;
+  --white-text-color: white;
+  --black-text-color: black;
+  --hamburger-background-color: #333;
+}
+/* --------------------navbar----------------------- */
+header {
+  width: 100%;
+  background-color: var(--navbar-background-color);
+}
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 10vh;
+}
+.company-name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.company-name a {
+  font-size: 20px;
+  color: var(--white-text-color);
+  text-decoration: none;
+}
+/* --------------------about----------------------- */
+.about-container {
+  width: 100%;
+  position: relative;
+}
+.about-container div:first-child {
+  position: relative;
+  width: 100%;
+}
+.about-container div:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.about-container div:first-child img {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+.about-container div:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  font-size: 14px;
+}
+.about-texts {
+  width: 100%;
+}
+.about-texts p {
+  width: 80%;
+  margin: 50px auto;
+  text-align: justify;
+  font-size: 14px;
+}
+/* --------------------footer----------------------- */
+footer {
+  width: 100%;
+}
+.footer-container {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 50px 0;
+}
+.footer-container h2 {
+  text-align: center;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-size: 14px;
+  padding-top: 20px;
+}
+.phone-element,
+.mail-element,
+.location-element,
+.time-element {
+  display: flex;
+  cursor: pointer;
+}
+.time-element {
+  cursor: unset;
+}
+.phone-element img,
+.mail-element img,
+.location-element img,
+.time-element img {
+  width: 15px;
+  margin-right: 5px;
+}
+.location-element a {
+  color: var(--white-text-color);
+  text-decoration: none;
+}
+.phone-element a,
+.mail-element a {
+  color: var(--border-same-color);
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  /* --------------------navbar----------------------- */
+  .company-name a {
+    font-size: 30px;
+  }
+  /* --------------------about----------------------- */
+  .about-container div:first-child img {
+    height: 400px;
+    object-fit: cover;
+  }
+  .about-container div:last-child h2 {
+    font-size: 25px;
+  }
+  .about-texts p {
+    font-size: 16px;
+  }
+  /* --------------------footer----------------------- */
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* --------------------navbar----------------------- */
+  .company-name a {
+    font-size: 40px;
+  }
+  /* --------------------about----------------------- */
+  .about-container div:first-child img {
+    height: 500px;
+  }
+  .about-container div:last-child h2 {
+    font-size: 40px;
+  }
+  .about-texts {
+    width: 100%;
+  }
+  .about-texts p {
+    font-size: 20px;
+    width: 80%;
+    margin: 50px 0;
+    margin-left: 10%;
+  }
+  /* --------------------footer----------------------- */
+  .footer-container {
+    padding: 20px 0;
+  }
+}

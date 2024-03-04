@@ -9,22 +9,26 @@
   /* -------------------same-------------- */
   --border-same-color: #b12b24;
   /* ----------------navbar--------------- */
-  --navbar-background-color: #1b262c;
+  --navbar-background-color: #2a77d6;
   --white-text-color: white;
   --black-text-color: black;
-  --hamburger-background-color: black;
+  --hamburger-background-color: #333;
+  /* -------------------home------------- */
+  --about-button-background-color: #b12b24;
   /* ----------------about--------------- */
-  --about-background-color: rgb(226, 225, 225);
+  --about-background-color: rgba(130, 181, 242, 0.7);
   /* ----------------services--------------- */
-  --services-background-color: rgb(226, 225, 225);
+  --services-background-color: rgba(130, 181, 242, 0.6);
   /* ----------------truck--------------- */
-  --truck-background-color: white;
+  --truck-background-color: #f9f9f9;
   /* ----------------customer-satisfaction--------------- */
-  --customer-background-color: white;
-  --customer-cards-background-color: rgb(226, 225, 225);
-  --quotation-mark-color: rgb(133, 133, 133);
+  --customer-background-color: #f9f9f9;
+  --customer-cards-background-color: rgba(130, 181, 242, 0.5);
+  --quotation-mark-color: #858585;
   /* ----------------contact--------------- */
-  --contact-background-color: rgb(226, 225, 225);
+  --contact-background-color: rgba(130, 181, 242, 0.4);
+  /* ----------------footer--------------- */
+  --footer-background-color: black;
 }
 html {
   scroll-behavior: smooth;
@@ -136,12 +140,14 @@ nav {
 .animate-slide-down {
   animation: textSlideDown 0.5s ease-out forwards;
 }
-main .home-container {
+.home-container {
   height: 50vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 40px;
   background: linear-gradient(
       to right,
       rgba(255, 255, 255, 0.6) 20%,
@@ -152,8 +158,31 @@ main .home-container {
   background-position: center;
   background-size: cover;
 }
-.home-container div h2 {
+.home-container div:first-child h2 {
   font-size: 20px;
+}
+.home-container div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.home-container div:last-child a {
+  width: 150px;
+  font-size: 14px;
+  padding: 10px 0;
+  border-radius: 50px;
+  border: none;
+  color: var(--white-text-color);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.home-container div:last-child a:hover {
+  transform: scale(1.05);
+}
+.about-button {
+  background-color: var(--about-button-background-color);
 }
 .underline {
   width: 100%;
@@ -165,7 +194,7 @@ main .home-container {
   width: 100px;
   border-bottom: 5px solid var(--border-same-color);
 }
-.home-container div p:last-child {
+.home-container div:first-child p:last-child {
   font-weight: 400;
   font-size: 14px;
 }
@@ -182,14 +211,35 @@ main .home-container {
 .about-container div:last-child {
   text-align: center;
   padding-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
 .about-container div:last-child h2 {
   font-size: 20px;
   font-weight: 600;
 }
-.about-container div:last-child p:last-child {
+.about-us-text {
   font-weight: 400;
   font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-inline-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.about-us-button {
+  width: 100%;
+}
+.about-us-button a {
+  background-color: var(--about-button-background-color);
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--white-text-color);
+  transition: all 0.3s ease-in-out;
+}
+.about-us-button a:hover {
+  transform: scale(1.05);
 }
 /* --------------truck----------------- */
 .truck-container {
@@ -458,6 +508,7 @@ footer {
   height: 250px;
   display: flex;
   justify-content: center;
+  background-color: var(--footer-background-color);
 }
 footer ul {
   width: 100%;
@@ -472,6 +523,7 @@ footer ul {
   font-weight: 600;
   text-align: center;
   padding-bottom: 20px;
+  color: var(--white-text-color);
 }
 .menu-links-footer {
   display: flex;
@@ -486,4 +538,5 @@ footer ul {
   display: block;
   font-size: 16px;
   font-weight: 400;
+  color: var(--white-text-color);
 }
