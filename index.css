@@ -9,7 +9,7 @@
   /* -------------------same-------------- */
   --border-same-color: #b12b24;
   /* ----------------navbar--------------- */
-  --navbar-background-color: #2a77d6;
+  --navbar-background-color: #003366;
   --white-text-color: white;
   --black-text-color: black;
   --hamburger-background-color: #333;
@@ -28,7 +28,7 @@
   /* ----------------contact--------------- */
   --contact-background-color: rgba(130, 181, 242, 0.4);
   /* ----------------footer--------------- */
-  --footer-background-color: black;
+  --footer-background-color: #333333;
 }
 html {
   scroll-behavior: smooth;
